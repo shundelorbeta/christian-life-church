@@ -1,0 +1,53 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "ministries": "Ministries",
+      "extensions": "Extensions",
+      "events": "Events",
+      "calendar": "Calendar",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "prayer": "Prayer Request"
+    },
+    "hero": {
+      "title": "Welcome to Christian Life Church",
+      "subtitle": "A place of worship, community, and spiritual growth"
+    }
+  },
+  "ceb": {
+    "nav": {
+      "home": "Balay",
+      "about": "Mahitungod",
+      "ministries": "Mga Ministerio",
+      "extensions": "Mga Extension",
+      "events": "Mga Hitabo",
+      "calendar": "Kalendaryo",
+      "gallery": "Galerya",
+      "contact": "Kontak",
+      "prayer": "Panag-ampo"
+    },
+    "hero": {
+      "title": "Welcome sa Christian Life Church",
+      "subtitle": "Lugar sa pagsimba, komunidad, ug espirituhanong pagtubo"
+    }
+  },
+  "fil": {
+    "nav": {
+      "home": "Bahay",
+      "about": "Tungkol",
+      "ministries": "Mga Ministerio",
+      "extensions": "Mga Extension",
+      "events": "Mga Kaganapan",
+      "calendar": "Kalendaryo",
+      "gallery": "Galerya",
+      "contact": "Kontak",
+      "prayer": "Panalangin"
+    },
+    "hero": {
+      "title": "Welcome sa Christian Life Church",
+      "subtitle": "Isang lugar ng pagsamba, komunidad, at espirituwal na paglago"
+    }
+  }
+}
