@@ -72,31 +72,6 @@ body {
   padding: 0 var(--spacing-md);
 }
 
-/* Announcement Bar */
-.announcement-bar {
-  background-color: var(--accent-dark-blue);
-  color: white;
-  padding: var(--spacing-xs) 0;
-  position: relative;
-  z-index: 1000;
-  transition: opacity var(--transition-normal), transform var(--transition-normal);
-}
-
-.announcement-bar.hidden {
-  transform: translateY(-100%);
-}
-
-.announcement-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.announcement-bar p {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
 .close-btn {
   background: none;
   border: none;
@@ -670,20 +645,6 @@ main {
   margin-top: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
 }
-
-.featured-event {
-  /* Spacing handled by parent flex gap */
-}
-
-.additional-events {
-  /* Spacing handled by parent flex gap */
-}
-
-.event-card.featured {
-  /* Featured event styling - can be enhanced if needed */
-}
-
-
 
 .btn-large {
   padding: var(--spacing-sm) var(--spacing-xl);
