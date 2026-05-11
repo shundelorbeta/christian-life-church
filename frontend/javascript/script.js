@@ -48,6 +48,7 @@ function initAnnouncementBar() {
     };
 }
 
+
 // Dark Mode Functionality
 function initDarkMode() {
     const darkModeSwitch = document.getElementById('dark-mode-switch');

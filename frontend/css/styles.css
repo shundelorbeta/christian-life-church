@@ -109,24 +109,16 @@ body {
   gap: var(--spacing-sm);
 }
 
-.logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  border-radius: var(--border-radius-sm);
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent-blue);
-  color: var(--primary-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: var(--border-radius-sm);
-}
+
 
 .brand-text {
   font-family: var(--font-heading);
@@ -139,22 +131,112 @@ body {
 .navbar-nav {
   display: flex;
   list-style: none;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-sm);
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-secondary);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--border-radius-sm);
-  transition: color var(--transition-fast), background-color var(--transition-fast);
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  white-space: nowrap;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--accent-blue);
-  background-color: var(--secondary-bg);
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+  color: var(--accent-blue);
+}
+
+/* Dropdown Styles */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  margin-left: var(--spacing-xs);
+}
+
+.nav-dropdown:hover .dropdown-arrow,
+.nav-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  padding: var(--spacing-sm) 0;
+  margin-top: var(--spacing-xs);
+}
+
+.dark-mode .dropdown-menu {
+  background: rgba(26, 32, 44, 0.95);
+  border-color: rgba(74, 85, 104, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 0;
+  font-size: 0.85rem;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--accent-blue);
+  padding-left: var(--spacing-xl);
+}
+
+.dark-mode .dropdown-menu a:hover {
+  background: rgba(74, 85, 104, 0.2);
+  color: var(--accent-blue);
 }
 
 /* Navbar Actions */
@@ -1412,10 +1494,9 @@ main {
   border-radius: var(--border-radius-sm);
 }
 
-.footer-logo .logo {
-  background-color: var(--accent-blue);
-  color: var(--primary-bg);
-}
+
+
+
 
 .footer-logo span {
   font-family: var(--font-heading);
@@ -1536,7 +1617,31 @@ main {
   }
 
   .navbar-nav {
-    gap: var(--spacing-md);
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0;
+    min-width: auto;
+    display: none;
+  }
+
+  .nav-dropdown.active .dropdown-menu {
+    display: block;
   }
 
   .hero-section h1 {
